@@ -43,13 +43,13 @@ app.layout = html.Div([
                 labelStyle={'display': 'inline-block'}
             )
         ],
-        style={'width': '48%', 'display': 'inline-block'}),
+        style={'width': '25%', 'display': 'inline-block'}),
 
         html.Div([
             dcc.Dropdown(
                 id='yaxis-column',
                 options=[{'label': i, 'value': i} for i in available_indicators],
-                value='Chain linked volumes (2010), million euro'
+                value='Chain linked volumes, index 2010=100'
             ),
             dcc.RadioItems(
                 id='yaxis-type',
@@ -57,7 +57,7 @@ app.layout = html.Div([
                 value='Linear',
                 labelStyle={'display': 'inline-block'}
             )
-        ],style={'width': '48%', 'float': 'right', 'display': 'inline-block'})
+        ],style={'width': '25%', 'float': 'right', 'display': 'inline-block'})
     ]),
        dcc.Graph(id='scatter'),
 
@@ -76,7 +76,7 @@ app.layout = html.Div([
                 value='Greece'
             )
         ],
-        style={'width': '30%', 'marginTop': 40, 'display': 'inline-block'}),
+        style={'width': '25%', 'marginTop': 40, 'display': 'inline-block'}),
         
          html.Div([
             dcc.Dropdown( 
@@ -85,7 +85,7 @@ app.layout = html.Div([
                 value= "Gross domestic product at market prices"
                 
             )
-        ],style={'width': '30%', 'marginTop': 40, 'float': 'right', 'display': 'inline-block'})
+        ],style={'width': '25%', 'marginTop': 40, 'float': 'right', 'display': 'inline-block'})
      ]),
     dcc.Graph(id='linegraph'),
 ])
